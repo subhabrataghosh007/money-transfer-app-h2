@@ -5,9 +5,9 @@ Framework: Quarkus
 Database: H2
 
 
-How to run:
-./mvnw clean install
-java -jar target/money-transfer-app-h2-1.0-runner.jar 
+How to run:<br>
+./mvnw clean install<br>
+java -jar target/money-transfer-app-h2-1.0-runner.jar <br><br>
 
 
 <b>Wallet Resources</b>:
