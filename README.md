@@ -11,7 +11,7 @@ How to run:<br>
 java -jar target/money-transfer-app-h2-1.0-runner.jar <br><br>
 
 
-<h1>Wallet Resources</h1>:
+<h1>Wallet Resources:</h1>
 
 Base URL:<br />
 http://localhost:8080/v1/wallets
@@ -92,7 +92,8 @@ Sample Success Response:
 
 
 
-<h1>Money Transfer Resources</h1>:
+
+<h1>Money Transfer Resources:</h1>
 
 Base URL:<br />
 http://localhost:8080/v1/transactions
