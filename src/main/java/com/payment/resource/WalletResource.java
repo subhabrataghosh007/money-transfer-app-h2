@@ -23,7 +23,7 @@ import com.payment.service.WalletService;
 import com.payment.validation.CustomeValidation;
 
 
-@Path("/v1/accounts")
+@Path("/v1/wallets")
 public class WalletResource {
 
 	private static final Logger LOGGER = getLogger(WalletResource.class);
@@ -40,7 +40,7 @@ public class WalletResource {
 	}
 
 	@POST
-	@Path("/account")
+	@Path("/wallet")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response createAccount(Wallet wallet) {
@@ -55,7 +55,7 @@ public class WalletResource {
 	}
 
 	@PUT
-	@Path("/account/addmoney")
+	@Path("/wallet/addmoney")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response addMoney(Wallet wallet) {
