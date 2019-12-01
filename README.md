@@ -1,6 +1,10 @@
 # money-transfer-app-h2
 money-transfer-app with H2 database
 
+Framework: Quarkus
+Database: H2
+
+
 How to run:
 ./mvnw clean install
 java -jar target/money-transfer-app-h2-1.0-runner.jar 
