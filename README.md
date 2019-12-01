@@ -2,6 +2,7 @@
 money-transfer-app with H2 database
 
 Framework: Quarkus
+
 Database: H2
 
 
