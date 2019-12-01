@@ -1,6 +1,10 @@
 # money-transfer-app-h2
 money-transfer-app with H2 database
 
+How to run:
+./mvnw clean install
+java -jar target/money-transfer-app-h2-1.0-runner.jar 
+
 
 <b>Wallet Resources</b>:
 
