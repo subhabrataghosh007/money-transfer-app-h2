@@ -11,7 +11,7 @@ How to run:<br>
 java -jar target/money-transfer-app-h2-1.0-runner.jar <br><br>
 
 
-<b>Wallet Resources</b>:
+<h1>Wallet Resources</h1>:
 
 Base URL:<br />
 http://localhost:8080/v1/wallets
@@ -92,7 +92,7 @@ Sample Success Response:
 
 
 
-<b>Money Transfer Resources</b>:
+<h1>Money Transfer Resources</h1>:
 
 Base URL:<br />
 http://localhost:8080/v1/transactions
@@ -102,6 +102,7 @@ GET "<i>/</i>"
 Response code: 200
 Sample Success Response:
 Find all money transfer transactions
+
 `[
     {
         "transactionId": "70d57d84-fdc2-418e-98ba-03bd1efd56dc",
