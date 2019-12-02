@@ -40,13 +40,12 @@ public class WalletServiceImpl implements WalletService {
 	}
 
 	@Override
-	public void addMoney(Wallet wallet) {
-		
-		if (!walletRepository.doesWalletExist(wallet.getPhoneNumber())) {
-			LOGGER.error("Wallet with mobile number {} not exists", wallet.getPhoneNumber());
-			throw new NotFoundException("Wallet with mobile number " + wallet.getPhoneNumber() + " not exists");
+	public void addMoney(Wallet wallet, String phoneNumber) {
+		if (!walletRepository.doesWalletExist(phoneNumber)) {
+			LOGGER.error("Wallet with mobile number {} not exists", phoneNumber);
+			throw new NotFoundException("Wallet with mobile number " + phoneNumber + " not exists");
 		}
 
-		walletRepository.addMoneyToWallet(wallet);
+		walletRepository.addMoneyToWallet(wallet, phoneNumber);
 	}
 }

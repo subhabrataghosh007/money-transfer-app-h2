@@ -95,22 +95,22 @@ public class WalletRepository {
 		}
 	}
 
-	public void addMoneyToWallet(Wallet wallet) {
+	public void addMoneyToWallet(Wallet wallet, String phoneNumber) {
 
 		try (Connection conn = dataSource.getConnection();
 				PreparedStatement preparedStatement = conn.prepareStatement(CREDIT_MONEY_SQL)) {
 
-			LOGGER.info("Debiting money from account (Mobile number - {})", wallet.getPhoneNumber());
+			LOGGER.info("Debiting money from account (Mobile number - {})", phoneNumber);
 			preparedStatement.setBigDecimal(1, wallet.getBalance());
-			preparedStatement.setString(2, wallet.getPhoneNumber());
+			preparedStatement.setString(2, phoneNumber);
 			int updateCount = preparedStatement.executeUpdate();
 			
 			if (updateCount == 1) {
-				LOGGER.info("Wallets balance updated for mobile number :: {}", wallet.getPhoneNumber());
+				LOGGER.info("Wallets balance updated for mobile number :: {}", phoneNumber);
 			} else {
-				LOGGER.error("Failed to update Wallets balance for mobile number :: {}", wallet.getPhoneNumber());
+				LOGGER.error("Failed to update Wallets balance for mobile number :: {}", phoneNumber);
 				throw new InternalException(
-						"Failed to update Wallet balance for mobile number " + wallet.getPhoneNumber());
+						"Failed to update Wallet balance for mobile number " + phoneNumber);
 			}
 		} catch (SQLException ex) {
 			LOGGER.error("Error occurred to update balance in Wallets table", ex);

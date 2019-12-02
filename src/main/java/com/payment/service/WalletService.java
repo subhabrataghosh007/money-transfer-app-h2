@@ -10,6 +10,6 @@ public interface WalletService {
 
 	public void addWallet(Wallet wallet);
 
-	public void addMoney(Wallet wallet);
+	public void addMoney(Wallet wallet, String phoneNumber);
 
 }
