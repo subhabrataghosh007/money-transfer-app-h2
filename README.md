@@ -8,7 +8,7 @@ Database: H2
 <h2>How to run:</h2>
 
 ```
-./mvnw clean install<br>
+./mvnw clean install
 
 java -jar target/money-transfer-app-h2-1.0-runner.jar
 ```
